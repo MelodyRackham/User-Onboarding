@@ -1,13 +1,42 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+button {
+  color: pink;
+  font-size: 25px;
+  border-color: pink;
+  border-radius: 10px;
+  background-color: black;
+  border-width: 3px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 30px 30px;
+  text-align: center;
+}
+
+.name,
+.email,
+.password,
+.terms,
+.checkbox-container,
+.input {
+  color: purple;
+  font-size: 25px;
+  border-color: pink;
+  border-radius: 10px;
+  background-color: lightgray;
+  border-width: 3px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 30px 30px;
+  text-align: center;
 }

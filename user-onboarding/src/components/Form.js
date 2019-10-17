@@ -12,22 +12,26 @@ const NewUserForm = ({ values, touched, errors, status }) => {
 
   return (
     <div className='user-form'>
-      <h1>New User</h1>
       <Form>
-        <Field type='text' name='name' placeholder='name' />
+        <Field className='name' type='text' name='name' placeholder='name' />
         {touched.name && errors.name && <p className='error'>{errors.name}</p>}
-        <Field type='text' name='email' placeholder='email' />
+        <br />
+        <Field className='email' type='text' name='email' placeholder='email' />
         {touched.email && errors.email && <p className='error'>{errors.email}</p>}
-        <Field type='password' name='password' placeholder='password' />
+        <br />
+        <Field className='password' type='password' name='password' placeholder='password' />
         {touched.password && errors.password && <p className='error'>{errors.password}</p>}
+        <br />
         <label className='checkbox-container'>
           {' '}
-          Terms of Service
-          <Field type='checkbox' name='Terms' checked={values.Terms} />
+          I agree to the Terms of Service
+          <Field className='terms' type='checkbox' name='Terms' checked={values.Terms} />
           <span className='checkmark' />
         </label>
-
+        <br />
         <button type='submit'> Submit! </button>
+        <br />
+        <input type='text' className='input' placeholder='Search...' />
       </Form>
       {newUser.map(user => (
         <ul key={user.id}>
