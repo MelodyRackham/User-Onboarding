@@ -26,7 +26,6 @@ button {
 .name,
 .email,
 .password,
-.terms,
 .checkbox-container,
 .input {
   color: purple;
@@ -39,4 +38,27 @@ button {
   padding-top: 10px;
   margin: 30px 30px;
   text-align: center;
+}
+
+.user-form {
+  text-align: center;
+}
+
+.checkbox-container {
+  border-radius: 3px;
+  text-align: right;
+  color: purple;
+  font-size: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 10px 10px;
+  text-align: center;
+  background-color: white;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Liu Jian Mao Cao', cursive;
+  font-size: 40px;
+  color: purple;
 }

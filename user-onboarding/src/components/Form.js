@@ -22,11 +22,10 @@ const NewUserForm = ({ values, touched, errors, status }) => {
         <Field className='password' type='password' name='password' placeholder='password' />
         {touched.password && errors.password && <p className='error'>{errors.password}</p>}
         <br />
-        <label className='checkbox-container'>
-          {' '}
-          I agree to the Terms of Service
-          <Field className='terms' type='checkbox' name='Terms' checked={values.Terms} />
-          <span className='checkmark' />
+        <label>
+          <span>I have read and agree to the Term of Service.</span>
+          <Field type='checkbox' name='terms' checked={values.terms} />
+          {touched.terms && errors.terms && <p>{errors.terms}</p>}
         </label>
         <br />
         <button type='submit'> Submit! </button>
