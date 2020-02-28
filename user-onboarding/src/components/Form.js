@@ -36,7 +36,8 @@ const NewUserForm = ({ values, touched, errors, status }) => {
         <ul key={user.id}>
           <li> Name: {user.name} </li>
           <li> Email: {user.email} </li>
-          <li> Password: {user.password.length} characters </li>
+          <li> Password: {user.password} </li>
+          <li> Agrees to Terms: {user.terms} </li>
         </ul>
       ))}
     </div>
@@ -44,18 +45,22 @@ const NewUserForm = ({ values, touched, errors, status }) => {
 };
 
 const FormikNewUserForm = withFormik({
-  mapPropsToValues({ name, email, password, termsOfService }) {
+  mapPropsToValues({ name, email, password, terms }) {
     return {
       name: name || '',
       email: email || '',
       password: password || ' ',
-      termsOfService: termsOfService || false,
+      terms: terms || false,
     };
   },
   validationSchema: Yup.object().shape({
-    name: Yup.string().required(),
-    email: Yup.string().required(),
-    password: Yup.string().required(),
+    name: Yup.string().required('You must enter your name to continue.'),
+    email: Yup.string()
+      .email('Invalid email!')
+      .required('Please enter your email to continue.'),
+    password: Yup.string()
+      .min(8, 'Your password must be at least 8 characters!')
+      .required('Password is required.'),
   }),
   handleSubmit(values, { setStatus }) {
     axios
