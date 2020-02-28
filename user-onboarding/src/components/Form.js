@@ -37,7 +37,6 @@ const NewUserForm = ({ values, touched, errors, status }) => {
           <li> Name: {user.name} </li>
           <li> Email: {user.email} </li>
           <li> Password: {user.password} </li>
-          <li> Agrees to Terms: {user.terms} </li>
         </ul>
       ))}
     </div>
